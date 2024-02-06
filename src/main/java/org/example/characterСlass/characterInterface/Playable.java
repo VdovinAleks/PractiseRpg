@@ -1,4 +1,4 @@
-package org.example.СharacterСlass.СharacterInterface;
+package org.example.characterСlass.characterInterface;
 
 public interface Playable {
     void attack(); // метод для атаки

@@ -1,5 +1,5 @@
-package org.example.СharacterСlass;
-import org.example.СharacterСlass.СharacterInterface.Npc;
+package org.example.characterСlass;
+import org.example.characterСlass.characterInterface.Npc;
 
 public abstract class Character implements Npc {
     private final String name;
@@ -7,7 +7,9 @@ public abstract class Character implements Npc {
     private int mana;
 
     @Override
-    public abstract void interact();
+    public void interact(){
+        System.out.println("Привет я " + this.name);
+    };
 
     public Character(String name, int hp, int mana) {
         this.name = name;

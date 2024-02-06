@@ -1,6 +1,6 @@
-package org.example.СharacterСlass.FirstProffesionPlayer;
+package org.example.characterСlass.firstProffesionPlayer;
 
-import org.example.СharacterСlass.Player;
+import org.example.characterСlass.Player;
 
 public class Warrior extends Player {
     private int strength;

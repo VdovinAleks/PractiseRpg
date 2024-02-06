@@ -1,5 +1,5 @@
-package org.example.СharacterСlass.FirstProffesionPlayer;
-import org.example.СharacterСlass.Player;
+package org.example.characterСlass.firstProffesionPlayer;
+import org.example.characterСlass.Player;
 
 public class Archer extends Player {
     private int agility;

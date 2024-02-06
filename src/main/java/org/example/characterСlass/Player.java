@@ -1,7 +1,7 @@
-package org.example.СharacterСlass;
+package org.example.characterСlass;
 
 
-import org.example.СharacterСlass.СharacterInterface.Playable;
+import org.example.characterСlass.characterInterface.Playable;
 
 public abstract class Player implements Playable {
     private final String name;
@@ -15,6 +15,7 @@ public abstract class Player implements Playable {
         character.hp -= damage;
         System.out.println(character);
     }
+
 
     @Override
     public void levelUp() {
