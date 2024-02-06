@@ -1,12 +1,12 @@
-package org.example.СharacterСlass.FirstProffesion;
-import org.example.СharacterСlass.character;
+package org.example.СharacterСlass.FirstProffesionPlayer;
+import org.example.СharacterСlass.Player;
 
-public class mage extends character {
+public class Mage extends Player {
 
     private int intelligence;
     private int magicForce;
 
-    public mage(String name, int lvl, int hp, int mana, int intelligence, int magicForce) {
+    public Mage(String name, int lvl, int hp, int mana, int intelligence, int magicForce) {
         super(name, lvl, hp, mana);
         this.intelligence = intelligence;
         this.magicForce = magicForce;
@@ -26,5 +26,15 @@ public class mage extends character {
                 "Интеллект=" + intelligence +
                 ", Магическая сила=" + magicForce +
                 '}';
+    }
+
+    @Override
+    public void attack() {
+
+    }
+
+    @Override
+    public void defend() {
+
     }
 }

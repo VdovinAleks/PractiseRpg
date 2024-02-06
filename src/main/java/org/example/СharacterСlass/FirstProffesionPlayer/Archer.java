@@ -1,11 +1,11 @@
-package org.example.СharacterСlass.FirstProffesion;
-import org.example.СharacterСlass.character;
+package org.example.СharacterСlass.FirstProffesionPlayer;
+import org.example.СharacterСlass.Player;
 
-public class archer extends character {
+public class Archer extends Player {
     private int agility;
     private int accuracy;
 
-    public archer(String name, int lvl, int hp, int mana, int agility, int accuracy) {
+    public Archer(String name, int lvl, int hp, int mana, int agility, int accuracy) {
         super(name, lvl, hp, mana);
         this.agility = agility;
         this.accuracy = accuracy;
@@ -24,5 +24,15 @@ public class archer extends character {
                 "Ловкость=" + agility +
                 ", Точность=" + accuracy +
                 '}';
+    }
+
+    @Override
+    public void attack() {
+
+    }
+
+    @Override
+    public void defend() {
+
     }
 }

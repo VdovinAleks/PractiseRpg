@@ -1,12 +1,12 @@
-package org.example.СharacterСlass.FirstProffesion;
+package org.example.СharacterСlass.FirstProffesionPlayer;
 
-import org.example.СharacterСlass.character;
+import org.example.СharacterСlass.Player;
 
-public class warrior extends character {
+public class Warrior extends Player {
     private int strength;
     private int endurance;
 
-    public warrior(String name, int lvl, int hp, int mana, int strength, int endurance) {
+    public Warrior(String name, int lvl, int hp, int mana, int strength, int endurance) {
         super(name, lvl, hp, mana);
         this.strength = strength;
         this.endurance = endurance;
@@ -25,5 +25,15 @@ public class warrior extends character {
                 "Сила=" + strength +
                 ", Выносливость=" + endurance +
                 '}';
+    }
+
+    @Override
+    public void attack() {
+
+    }
+
+    @Override
+    public void defend() {
+
     }
 }
