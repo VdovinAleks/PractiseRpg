@@ -1,10 +1,10 @@
-package org.example.characterСlass;
+package org.example.charactersAndClasses.typesOfCharacter;
 
-import org.example.characterСlass.characterInterface.Fightable;
+import org.example.mechanics.characterInterface.Fightable;
 
 public abstract class Character implements Fightable {
     private final int baseDamage = 10;
-    private final String name;
+    private  String name = "Character";
     private int hp = 100;
     private int mana = 50;
 
@@ -12,6 +12,10 @@ public abstract class Character implements Fightable {
         this.name = name;
         this.hp = hp;
         this.mana = mana;
+    }
+
+    public Character() {
+
     }
 
     @Override

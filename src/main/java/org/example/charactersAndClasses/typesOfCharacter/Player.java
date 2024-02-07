@@ -1,14 +1,16 @@
-package org.example.characterСlass;
+package org.example.charactersAndClasses.typesOfCharacter;
 
-
-import org.example.characterСlass.characterInterface.Playable;
 
 public abstract class Player extends Character {
 
-    private  int lvl;
+    private  int lvl = 1;
 
-    public Player(String name, int hp, int mana) {
+    public Player(String name, int hp, int mana, int lvl) {
         super(name, hp, mana);
+        this.lvl = lvl;
+    }
+
+    public Player() {
     }
 
     public Player levelUp() {

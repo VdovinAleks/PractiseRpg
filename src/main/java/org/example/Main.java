@@ -1,7 +1,6 @@
 package org.example;
 
-import org.example.characterСlass.Player;
-import org.example.characterСlass.firstProffesionPlayer.*;
+import org.example.charactersAndClasses.firstProffesionPlayer.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +10,13 @@ public class Main {
         long startTime = System.currentTimeMillis();
         long duration = 15 * 1000; // 15 секунд в миллисекундах
         List<Character> npsList = new ArrayList<>();
-        Warrior war = new Warrior("Gambino", 23,150,70,35,23);
-        while (System.currentTimeMillis() - startTime < duration) {
-
-
-        }
+        Warrior war = new Warrior("Gambino", 23,50,23,34, 32);
+        Warrior war1 = new Warrior();
+        System.out.println(war);
+        System.out.println(war1);
+//        while (System.currentTimeMillis() - startTime < duration) {
+//
+//
+//        }
     }
 }

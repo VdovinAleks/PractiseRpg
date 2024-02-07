@@ -1,24 +1,28 @@
-package org.example.characterСlass.firstProffesionPlayer;
-import org.example.characterСlass.Player;
-import org.example.characterСlass.characterInterface.Fightable;
-import org.example.characterСlass.characterInterface.Playable;
+package org.example.charactersAndClasses.firstProffesionPlayer;
+
+import org.example.charactersAndClasses.typesOfCharacter.Player;
+import org.example.mechanics.characterInterface.Fightable;
+import org.example.mechanics.characterInterface.Playable;
 
 public class Mage extends Player implements Playable, Fightable {
 
     private int intelligence = 10;
     private int magicForce = 10;
 
-    public Mage(String name, int hp, int mana, int intelligence, int magicForce) {
-        super(name, hp, mana);
+    public Mage(String name, int lvl, int hp, int mana, int intelligence, int magicForce) {
+        super(name, hp, mana, lvl);
         this.intelligence = intelligence;
         this.magicForce = magicForce;
     }
 
-    public void fireBall (){
+    public Mage() {
+    }
+
+    public void fireBall() {
 
     }
 
-    public void getTreatment(){
+    public void getTreatment() {
 
     }
 

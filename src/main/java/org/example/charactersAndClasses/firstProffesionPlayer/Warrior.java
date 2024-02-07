@@ -1,17 +1,20 @@
-package org.example.characterСlass.firstProffesionPlayer;
+package org.example.charactersAndClasses.firstProffesionPlayer;
 
-import org.example.characterСlass.Player;
-import org.example.characterСlass.characterInterface.Fightable;
-import org.example.characterСlass.characterInterface.Playable;
+import org.example.charactersAndClasses.typesOfCharacter.Player;
+import org.example.mechanics.characterInterface.Fightable;
+import org.example.mechanics.characterInterface.Playable;
 
 public class Warrior extends Player implements Playable, Fightable {
     private int strength = 10;
     private int endurance = 10;
 
-    public Warrior(String name, int hp, int mana, int strength, int endurance) {
-        super(name, hp, mana);
+    public Warrior(String name, int lvl, int hp, int mana, int strength, int endurance) {
+        super(name, hp, mana, lvl);
         this.strength = strength;
         this.endurance = endurance;
+    }
+
+    public Warrior() {
     }
 
     @Override

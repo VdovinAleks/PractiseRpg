@@ -1,17 +1,20 @@
-package org.example.characterСlass.firstProffesionPlayer;
+package org.example.charactersAndClasses.firstProffesionPlayer;
 
-import org.example.characterСlass.Player;
-import org.example.characterСlass.characterInterface.Fightable;
-import org.example.characterСlass.characterInterface.Playable;
+import org.example.charactersAndClasses.typesOfCharacter.Player;
+import org.example.mechanics.characterInterface.Fightable;
+import org.example.mechanics.characterInterface.Playable;
 
 public class Archer extends Player implements Playable, Fightable {
     private int agility = 10;
     private int accuracy = 10;
 
-    public Archer(String name, int hp, int mana, int agility, int accuracy) {
-        super(name, hp, mana);
+    public Archer(String name, int lvl, int hp, int mana, int agility, int accuracy) {
+        super(name, hp, mana, lvl);
         this.agility = agility;
         this.accuracy = accuracy;
+    }
+
+    public Archer() {
     }
 
     private void useArrow() {
