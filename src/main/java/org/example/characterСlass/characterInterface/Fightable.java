@@ -1,5 +1,5 @@
 package org.example.characterСlass.characterInterface;
 
-public interface Npc {
-   void interact ();
+public interface Fightable {
+    void fight();
 }

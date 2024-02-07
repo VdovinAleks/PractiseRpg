@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.characterСlass.Player;
 import org.example.characterСlass.firstProffesionPlayer.*;
 
 import java.util.ArrayList;

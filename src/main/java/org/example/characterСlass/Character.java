@@ -1,15 +1,12 @@
 package org.example.characterСlass;
-import org.example.characterСlass.characterInterface.Npc;
 
-public abstract class Character implements Npc {
+import org.example.characterСlass.characterInterface.Fightable;
+
+public abstract class Character implements Fightable {
+    private final int baseDamage = 10;
     private final String name;
-    private int hp;
-    private int mana;
-
-    @Override
-    public void interact(){
-        System.out.println("Привет я " + this.name);
-    };
+    private int hp = 100;
+    private int mana = 50;
 
     public Character(String name, int hp, int mana) {
         this.name = name;
@@ -24,5 +21,12 @@ public abstract class Character implements Npc {
                 ", Здоровье=" + hp +
                 ", Мана=" + mana +
                 '}';
+    }
+
+    public void fight(Character character) {
+        while (this.hp < 1|| character.hp < 1){
+
+        }
+
     }
 }

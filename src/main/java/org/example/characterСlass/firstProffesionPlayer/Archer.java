@@ -1,20 +1,24 @@
 package org.example.characterСlass.firstProffesionPlayer;
+
 import org.example.characterСlass.Player;
+import org.example.characterСlass.characterInterface.Fightable;
+import org.example.characterСlass.characterInterface.Playable;
 
-public class Archer extends Player {
-    private int agility;
-    private int accuracy;
+public class Archer extends Player implements Playable, Fightable {
+    private int agility = 10;
+    private int accuracy = 10;
 
-    public Archer(String name, int lvl, int hp, int mana, int agility, int accuracy) {
-        super(name, lvl, hp, mana);
+    public Archer(String name, int hp, int mana, int agility, int accuracy) {
+        super(name, hp, mana);
         this.agility = agility;
         this.accuracy = accuracy;
     }
 
-    private void useArrow(){
+    private void useArrow() {
 
     }
-    private void useSecrecy(){
+
+    private void useSecrecy() {
 
     }
 
@@ -27,12 +31,17 @@ public class Archer extends Player {
     }
 
     @Override
-    public void attack() {
-
+    public int attack() {
+        return 0;
     }
 
     @Override
-    public void defend() {
+    public int defend() {
+        return 0;
+    }
+
+    @Override
+    public void fight() {
 
     }
 }
