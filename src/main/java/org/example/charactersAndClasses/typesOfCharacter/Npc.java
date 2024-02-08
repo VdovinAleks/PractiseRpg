@@ -7,7 +7,7 @@ public abstract class Npc extends Character {
         super(name, hp, mana);
     }
 
-    public void interact(){
+    public void interact() {
         System.out.println("Привет я неигровой персонаж");
     }
 

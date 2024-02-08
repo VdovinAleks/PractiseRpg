@@ -5,8 +5,8 @@ import org.example.mechanics.characterInterface.Fightable;
 import org.example.mechanics.characterInterface.Playable;
 
 public class Warrior extends Player implements Playable, Fightable {
-    private int strength = 10;
-    private int endurance = 10;
+    private int strength = 2;
+    private int endurance = 4;
 
     public Warrior(String name, int lvl, int hp, int mana, int strength, int endurance) {
         super(name, hp, mana, lvl);
@@ -27,7 +27,7 @@ public class Warrior extends Player implements Playable, Fightable {
 
     @Override
     public int attack() {
-        return 0;
+        return getBaseDamage() * strength;
     }
 
     @Override
