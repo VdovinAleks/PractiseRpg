@@ -18,10 +18,9 @@ public class Warrior extends Player {
 
     @Override
     public String toString() {
-        return "Воин{" + super.toString() +
-                "Сила=" + strength +
-                ", Выносливость=" + endurance +
-                '}';
+        return "\nВоин -> " + super.toString() +
+                "\nСила-> " + strength +
+                "\nВыносливость-> " + endurance;
     }
 
     @Override

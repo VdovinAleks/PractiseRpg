@@ -25,10 +25,9 @@ public class Archer extends Player {
 
     @Override
     public String toString() {
-        return "Лучник{" + super.toString() +
-                "Ловкость=" + agility +
-                ", Точность=" + accuracy +
-                '}';
+        return "\nЛучник -> " + super.toString() +
+                "\nЛовкость -> " + agility +
+                "\nТочность -> " + accuracy ;
     }
 
     @Override

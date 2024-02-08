@@ -44,6 +44,14 @@ public abstract class Character implements Fightable, Playable {
         return mana;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
     public Boolean fight(Character character) {
         while (this.hp > 0 && character.hp > 0) {
             character.hp -= attack();

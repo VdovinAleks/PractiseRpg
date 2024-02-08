@@ -6,13 +6,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.example.characters_and_classes.first_proffesion_player.Archer;
+import org.example.characters_and_classes.first_proffesion_player.Mage;
+import org.example.characters_and_classes.first_proffesion_player.Warrior;
 import org.example.characters_and_classes.types_of_character.Character;
 
 public class Creator {
 
 
-    private Character randomCreate() {
-        return null;
+    public Character randomCreate() {
+        Character character = createRandomClass();
+        character.setHp(generateRandomHealth());
+        character.setName(pickRandomName());
+        return character;
     }
 
 
@@ -20,6 +26,20 @@ public class Creator {
         Random random = new Random();
         return random.nextInt(51) + 50;
     }
+
+    public static Character createRandomClass() {
+        Random random = new Random();
+        int randomNum = random.nextInt(3);
+
+        return switch (randomNum) {
+            case 0 -> new Warrior();
+            case 1 -> new Archer();
+            case 2 -> new Mage();
+            default -> null;
+        };
+
+    }
+
 
     private String pickRandomName() {
         ArrayList<String> names = new ArrayList<>();

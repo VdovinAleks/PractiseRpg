@@ -26,10 +26,9 @@ public class Mage extends Player {
 
     @Override
     public String toString() {
-        return "Маг{" +
-                "Интеллект=" + intelligence +
-                ", Магическая сила=" + magicForce +
-                '}';
+        return "\nМаг-> " + super.toString() +
+                "\nИнтеллект-> " + intelligence +
+                "\nМагическая сила-> " + magicForce;
     }
 
     @Override
