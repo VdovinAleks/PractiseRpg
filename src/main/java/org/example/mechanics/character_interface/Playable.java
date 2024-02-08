@@ -1,4 +1,4 @@
-package org.example.mechanics.characterInterface;
+package org.example.mechanics.character_interface;
 
 public interface Playable {
     int attack(); // метод для атаки

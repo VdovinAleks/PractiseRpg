@@ -1,9 +1,6 @@
-package org.example.charactersAndClasses.firstProffesionPlayer;
+package org.example.characters_and_classes.first_proffesion_player;
 
-import org.example.charactersAndClasses.typesOfCharacter.Character;
-import org.example.charactersAndClasses.typesOfCharacter.Player;
-import org.example.mechanics.characterInterface.Fightable;
-import org.example.mechanics.characterInterface.Playable;
+import org.example.characters_and_classes.types_of_character.Player;
 
 public class Warrior extends Player {
     private int strength = 2;

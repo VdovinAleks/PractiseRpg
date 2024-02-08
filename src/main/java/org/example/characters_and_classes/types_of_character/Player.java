@@ -1,4 +1,4 @@
-package org.example.charactersAndClasses.typesOfCharacter;
+package org.example.characters_and_classes.types_of_character;
 
 
 public abstract class Player extends Character {

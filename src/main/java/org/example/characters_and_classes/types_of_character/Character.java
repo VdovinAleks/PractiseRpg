@@ -1,7 +1,7 @@
-package org.example.charactersAndClasses.typesOfCharacter;
+package org.example.characters_and_classes.types_of_character;
 
-import org.example.mechanics.characterInterface.Fightable;
-import org.example.mechanics.characterInterface.Playable;
+import org.example.mechanics.character_interface.Fightable;
+import org.example.mechanics.character_interface.Playable;
 
 public abstract class Character implements Fightable, Playable {
     private final int baseDamage = 4;

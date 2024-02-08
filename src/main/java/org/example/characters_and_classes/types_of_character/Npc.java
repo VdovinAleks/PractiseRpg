@@ -1,6 +1,4 @@
-package org.example.charactersAndClasses.typesOfCharacter;
-
-import org.example.charactersAndClasses.typesOfCharacter.Character;
+package org.example.characters_and_classes.types_of_character;
 
 public abstract class Npc extends Character {
     public Npc(String name, int hp, int mana) {
