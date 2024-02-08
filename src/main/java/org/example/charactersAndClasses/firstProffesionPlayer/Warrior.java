@@ -1,12 +1,14 @@
 package org.example.charactersAndClasses.firstProffesionPlayer;
 
+import org.example.charactersAndClasses.typesOfCharacter.Character;
 import org.example.charactersAndClasses.typesOfCharacter.Player;
 import org.example.mechanics.characterInterface.Fightable;
 import org.example.mechanics.characterInterface.Playable;
 
-public class Warrior extends Player implements Playable, Fightable {
+public class Warrior extends Player {
     private int strength = 2;
     private int endurance = 4;
+
 
     public Warrior(String name, int lvl, int hp, int mana, int strength, int endurance) {
         super(name, hp, mana, lvl);
@@ -35,9 +37,8 @@ public class Warrior extends Player implements Playable, Fightable {
         return 0;
     }
 
-
     @Override
     public void fight() {
-
+        System.out.println("asd");
     }
 }

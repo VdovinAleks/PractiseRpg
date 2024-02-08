@@ -1,22 +1,23 @@
 package org.example;
 
 import org.example.charactersAndClasses.firstProffesionPlayer.*;
+import org.example.charactersAndClasses.typesOfCharacter.Npc;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-        long duration = 15 * 1000; // 15 секунд в миллисекундах
+        long duration = 5 * 1000; // 15 секунд в миллисекундах
         List<Character> npsList = new ArrayList<>();
-        Warrior war = new Warrior("Gambino", 23,50,23,4, 15);
-        Warrior war1 = new Warrior();
-        System.out.println(war);
-        System.out.println(war1);
-//        while (System.currentTimeMillis() - startTime < duration) {
-//
-//
-//        }
+        Warrior war = new Warrior("Gambino", 23, 300, 23, 4, 15);
+        while (System.currentTimeMillis() - startTime < duration) {
+            Map<Npc,Boolean>
+            Warrior warrior = new Warrior();
+            war.fight(warrior);
+            if (war.getHp() < 1) break;
+        }
     }
 }

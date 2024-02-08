@@ -3,10 +3,10 @@ package org.example.charactersAndClasses.typesOfCharacter;
 import org.example.mechanics.characterInterface.Fightable;
 import org.example.mechanics.characterInterface.Playable;
 
-public abstract class Character implements Fightable,Playable {
+public abstract class Character implements Fightable, Playable {
     private final int baseDamage = 4;
     private String name = "Character";
-    private int hp = 100;
+    private int hp = 50;
     private int mana = 50;
 
     public Character(String name, int hp, int mana) {
@@ -32,14 +32,30 @@ public abstract class Character implements Fightable,Playable {
                 '}';
     }
 
-    public void fight(Character character) {
-        while (this.hp < 1 || character.hp < 1) {
-            character.hp -= this.baseDamage;
-            System.out.println(character.name + "Атаковал " + this.name + " на" + character.baseDamage + "урона");
-            this.hp -= character.baseDamage;
-            System.out.println(this.name + "Атаковал " + character.name + " на" + this.baseDamage + "урона");
+    public String getName() {
+        return name;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public Boolean fight(Character character) {
+        while (this.hp > 0 && character.hp > 0) {
+            character.hp -= attack();
+            System.out.println(character.name + " Атаковал " + this.name + " на " + character.attack() + " урона");
+            if (this.hp < 1){
+                break;
+            }
+            this.hp -= attack();
+            System.out.println(this.name + " Атаковал " + character.name + " на " + this.attack() + " урона");
         }
-        System.out.println(character + "\n" + this);
+        System.out.println("Итоги боя:\n" + this.name + " -> " + this.hp + "\n" + character.name + " -> " + character.hp);
+        return true;
     }
 
     @Override

@@ -4,7 +4,7 @@ import org.example.charactersAndClasses.typesOfCharacter.Player;
 import org.example.mechanics.characterInterface.Fightable;
 import org.example.mechanics.characterInterface.Playable;
 
-public class Archer extends Player implements Playable, Fightable {
+public class Archer extends Player {
     private int agility = 10;
     private int accuracy = 10;
 

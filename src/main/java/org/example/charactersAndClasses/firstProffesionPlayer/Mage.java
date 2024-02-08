@@ -4,7 +4,7 @@ import org.example.charactersAndClasses.typesOfCharacter.Player;
 import org.example.mechanics.characterInterface.Fightable;
 import org.example.mechanics.characterInterface.Playable;
 
-public class Mage extends Player implements Playable, Fightable {
+public class Mage extends Player {
 
     private int intelligence = 10;
     private int magicForce = 10;
