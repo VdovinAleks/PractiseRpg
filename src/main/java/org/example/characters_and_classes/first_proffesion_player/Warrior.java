@@ -35,6 +35,6 @@ public class Warrior extends Player {
 
     @Override
     public void fight() {
-        System.out.println("asd");
+
     }
 }

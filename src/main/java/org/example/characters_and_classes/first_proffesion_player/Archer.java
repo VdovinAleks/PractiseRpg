@@ -3,8 +3,8 @@ package org.example.characters_and_classes.first_proffesion_player;
 import org.example.characters_and_classes.types_of_character.Player;
 
 public class Archer extends Player {
-    private int agility = 10;
-    private int accuracy = 10;
+    private int agility = 2;
+    private int accuracy = 6;
 
     public Archer(String name, int lvl, int hp, int mana, int agility, int accuracy) {
         super(name, hp, mana, lvl);
