@@ -63,7 +63,8 @@ public abstract class Character implements Fightable, Playable {
             System.out.println(this.name + " Атаковал " + character.name + " на " + this.attack() + " урона");
         }
         System.out.println("Итоги боя:\n" + this.name + " -> " + this.hp + "\n" + character.name + " -> " + character.hp);
-        return true;
+        if (this.hp > 0) return true;
+        else return false;
     }
 
     @Override
