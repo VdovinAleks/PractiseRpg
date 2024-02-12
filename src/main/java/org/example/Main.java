@@ -11,13 +11,15 @@ public class Main {
         List<Character> npsList = new ArrayList<>();
         Map<Character, Boolean> log = new HashMap<>();
         Warrior war = new Warrior("Gambino", 23, 300, 23, 4, 15);
-        Character character = Creator.randomCharacterCreate();
-        System.out.println(character);
 
-//        for (int i = 0; i < 5; i++) {
-//            Character character = creator.randomCharacterCreate();
-//            npsList.add(character);
-//        }
+        for (int i = 0; i < 5; i++) {
+            Character character = Creator.randomCharacterCreate();
+            npsList.add(character);
+            System.out.println(character);
+        }
+        npsList.stream()
+                .forEachOrdered(war::fight);
+
 //        System.out.println(npsList);
 //        for (Character character : npsList) {
 //            log.put(character, war.fight(character));
