@@ -23,6 +23,14 @@ public class Warrior extends Player {
                 "\nВыносливость-> " + endurance;
     }
 
+    public void setFirstStat(int strength) {
+        this.strength = strength;
+    }
+
+    public void setSecondStat(int endurance) {
+        this.endurance = endurance;
+    }
+
     @Override
     public int attack() {
         return getBaseDamage() * strength;

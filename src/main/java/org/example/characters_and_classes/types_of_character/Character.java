@@ -52,6 +52,7 @@ public abstract class Character implements Fightable, Playable {
         this.hp = hp;
     }
 
+
     public Boolean fight(Character character) {
         while (this.hp > 0 && character.hp > 0) {
             character.hp -= attack();
@@ -63,8 +64,7 @@ public abstract class Character implements Fightable, Playable {
             System.out.println(this.name + " Атаковал " + character.name + " на " + this.attack() + " урона");
         }
         System.out.println("Итоги боя:\n" + this.name + " -> " + this.hp + "\n" + character.name + " -> " + character.hp);
-        if (this.hp > 0) return true;
-        else return false;
+        return this.hp > 0;
     }
 
     @Override
@@ -72,4 +72,6 @@ public abstract class Character implements Fightable, Playable {
         return this.baseDamage;
     }
 
+    public abstract void setFirstStat(int i);
+    public abstract void setSecondStat(int i);
 }

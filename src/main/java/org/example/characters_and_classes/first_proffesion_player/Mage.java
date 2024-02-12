@@ -16,19 +16,19 @@ public class Mage extends Player {
     public Mage() {
     }
 
-    public void fireBall() {
-
-    }
-
-    public void getTreatment() {
-
-    }
-
     @Override
     public String toString() {
         return "\nМаг-> " + super.toString() +
                 "\nИнтеллект-> " + intelligence +
                 "\nМагическая сила-> " + magicForce;
+    }
+
+    public void setFirstStat(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public void setSecondStat(int magicForce) {
+        this.magicForce = magicForce;
     }
 
     @Override

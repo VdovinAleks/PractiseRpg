@@ -1,9 +1,9 @@
 package org.example.mechanics.creator;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Random;
 
 import org.example.characters_and_classes.first_proffesion_player.Archer;
@@ -14,17 +14,27 @@ import org.example.characters_and_classes.types_of_character.Character;
 public class Creator {
 
 
-    public Character randomCreate() {
+    public static Character randomCharacterCreate() {
         Character character = createRandomClass();
         character.setHp(generateRandomHealth());
-        character.setName(pickRandomName());
+        character.setName(getRandomNameFromFile());
+        character.setFirstStat(generateRandomFirstStat());
+        character.setSecondStat(generateRandomSecondStat());
         return character;
     }
 
 
-    private int generateRandomHealth() {
+    private static int generateRandomHealth() {
         Random random = new Random();
         return random.nextInt(51) + 50;
+    }
+    private static int generateRandomFirstStat() {
+        Random random = new Random();
+        return random.nextInt(3) + 1;
+    }
+    private static int generateRandomSecondStat() {
+        Random random = new Random();
+        return random.nextInt(3) + 1;
     }
 
     public static Character createRandomClass() {
@@ -39,24 +49,22 @@ public class Creator {
         };
 
     }
-
-
-    private String pickRandomName() {
-        ArrayList<String> names = new ArrayList<>();
-
-        try (BufferedReader reader = new BufferedReader(new FileReader
-                ("/Users/aleksandr/IdeaProjects/OopPractice/src/main/java/org/example/data/names.txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                names.add(line);
-            }
+    public static String getRandomNameFromFile() {
+        List<String> names;
+        try {
+            names = Files.readAllLines(Paths.get("src/main/java/org/example/data/names.txt"));
         } catch (IOException e) {
-            e.printStackTrace();
+            return null;
+        }
+
+        if (names.isEmpty()) {
+            return null;
         }
 
         Random random = new Random();
         int randomIndex = random.nextInt(names.size());
         return names.get(randomIndex);
     }
+
 
 }
